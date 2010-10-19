@@ -1,0 +1,36 @@
+#Maintainer: Terry M. Poulin <BigBoss1964@gmail.com>
+#
+# Please report any issues with this package via Github:
+#
+# 	http://github.com/Spidey01/zenwalk-splint-package/issues
+#
+# If you must send an E-Mail, prefix the subject line with the package name, or
+# some other means of identifying it as NON-SPAM.
+
+pkgname=splint
+pkgver=3.1.2
+pkgrel=1
+zenver=64
+arch=i486
+source=("http://www.splint.org/downloads//${pkgname}-${pkgver}.src.tgz")
+sourcetemplate="http://dl.dropbox.com/u/7012687/zenwalk/packages/${pkgname}"
+docs=("README" "LICENSE")
+url="http://splint.org/"
+
+slackdesc=\
+(
+#|-----handy-ruler------------------------------------------------------|
+"$pkgname - Secure Programming Lint"
+""
+"A more modern lint-style static code analysis tool for C programmers"
+)
+
+build() {
+	cd "$startdir/src/$pkgname-$pkgver"
+
+	./configure --prefix=/usr --localstatedir=/var --sysconfdir=/etc \
+	            --mandir=/usr/man
+
+	make || return 1
+	make DESTDIR="${startdir}/pkg" install
+} 
