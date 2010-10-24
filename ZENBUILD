@@ -10,7 +10,7 @@
 pkgname=splint
 pkgver=3.1.2
 pkgrel=1
-zenver=64
+zenver=66
 arch=i486
 source=("http://www.splint.org/downloads//${pkgname}-${pkgver}.src.tgz")
 sourcetemplate="http://dl.dropbox.com/u/7012687/zenwalk/packages/${pkgname}"
