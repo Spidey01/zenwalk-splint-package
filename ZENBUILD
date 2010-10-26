@@ -13,7 +13,7 @@ pkgrel=1
 zenver=66
 arch=i486
 source=("http://www.splint.org/downloads//${pkgname}-${pkgver}.src.tgz")
-sourcetemplate="http://dl.dropbox.com/u/7012687/zenwalk/packages/${pkgname}"
+sourcetemplate="http://www.auroracore.biz/user-accounts/terryp/${pkgname}"
 docs=("README" "LICENSE")
 url="http://splint.org/"
 
